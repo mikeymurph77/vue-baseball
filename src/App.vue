@@ -126,7 +126,11 @@
     },
     computed: {
       fieldViewImg() {
-        return "/src/assets/field/" + this.lastPlay + "-field-view.png"
+        if (process.env.NODE_ENV === 'production') {
+          return "assets/field/" + this.lastPlay + "-field-view.png"
+        } else {
+          return "/src/assets/field/" + this.lastPlay + "-field-view.png"
+        }
       }
     }
   }
