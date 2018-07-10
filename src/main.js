@@ -12,7 +12,7 @@ Vue.mixin({
   data: function() {
     return {
       get combos() {
-        return CONSTANTS.COMBOS;
+        return CONSTANTS.FORCEDCOMBOS;
       }
     }
   }
